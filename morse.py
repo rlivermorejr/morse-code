@@ -18,12 +18,6 @@ Jackson Detke
 """
 
 from morse_dict import MORSE_2_ASCII
-# dot smallest sequence of 1's
-
-# loop through and count the 1's
-# stop at 0 then start loop again
-# counting each group of 1's and comparing
-# compare to time_unit
 
 # bits does not work. bit converters online don't match
 
@@ -72,9 +66,17 @@ def decode_morse(morse):
 
 
 if __name__ == '__main__':
-    ui = input('Enter morse to decode: ')
+    ui = input(
+        'Select 1 to decode a morse-code sequence\nor 2 to decode a binary-sequence to morse code: ')
     try:
-        morse = decode_morse(ui)
-        print(morse)
+        if ui == '1':
+            mor = input('Please enter the morse code to decode: ')
+            morse = decode_morse(mor)
+            print(morse)
+        if ui == '2':
+            print('Sorry, still working on the bits function. Try decoding some morse!')
+            # bit = input('Please enter the bits to decode: ')
+            # output = decode_bits(bit)
+            # print(output)
     except KeyError:
-        print("Morse syntax is incorrect!")
+        print("Syntax is incorrect!")
