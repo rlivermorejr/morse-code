@@ -65,7 +65,7 @@ def decode_morse(morse):
 #     return decode_morse(morse)
 
 
-if __name__ == '__main__':
+def main():
     ui = input(
         'Select 1 to decode a morse-code sequence\nor 2 to decode a binary-sequence to morse code: ')
     try:
@@ -80,3 +80,7 @@ if __name__ == '__main__':
             # print(output)
     except KeyError:
         print("Syntax is incorrect!")
+
+
+if __name__ == '__main__':
+    main()
